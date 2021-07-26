@@ -18,6 +18,7 @@ def imread_web(url):
     return img
 
 if __name__ == "__main__":
+    # 以下の情報については、各自の環境に応じて変更する。
     subscription_key = ""
     endpoint = ""
 
