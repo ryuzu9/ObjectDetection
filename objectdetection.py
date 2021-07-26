@@ -18,7 +18,7 @@ def imread_web(url):
     return img
 
 if __name__ == "__main__":
-    # 以下の情報については、各自の環境に応じて変更する。
+    # 別途指定する値に書き換える
     subscription_key = ""
     endpoint = ""
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     body = json.dumps(body)
 
     try:
-        conn = http.client.HTTPSConnection('takano0624.cognitiveservices.azure.com')
+        conn = http.client.HTTPSConnection(endpoint)
         conn.request("POST", "/vision/v2.1/analyze?%s" % params, body, headers)
         response = conn.getresponse()
         data = json.loads(response.read())
